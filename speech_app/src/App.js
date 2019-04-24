@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Jumbotron, Container } from 'reactstrap';
 import  { FaMousePointer  } from "react-icons/fa";
+import { MDBInput } from "mdbreact";
 
 
 
@@ -47,9 +48,13 @@ class App extends Component {
         </Container>
       </Jumbotron>
     </div>
-    <div>
-          </div>
-      </div> 
+    <div> <MDBInput
+          type="textarea"
+          label="Icon Prefix"
+          rows="2"
+          icon="pencil-alt"/>
+        </div> 
+   </div>
       
     );
   }
