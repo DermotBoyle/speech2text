@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
          <Navbar color="Faded" light>
-          <NavbarBrand href="/" className='Title' style={{textAlign: "center"}}>reactstrap</NavbarBrand>
+          <NavbarBrand href="/" className="Mr-auto">Title/Icon</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="Mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
