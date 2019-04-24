@@ -50,7 +50,7 @@ class App extends Component {
     </div>
     <div> <MDBInput
           type="textarea"
-          label="Icon Prefix"
+          label="Text here to write"
           rows="2"
           icon="pencil-alt"/>
         </div> 
