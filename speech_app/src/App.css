@@ -6,13 +6,18 @@
   font-size:   50px;
   margin-left: 20px;
 }
-
+.flexbox-container{
+  display: flex;
+  justify-content: center;
+}
 .md-form {
     margin-right: 5rem;
     margin-left: 3rem;
     border: 1px solid black;
+    width: 700px;
 }
 
 .jumbotron.jumbotron-fluid{
   margin-bottom: 10rem;
 }
+
