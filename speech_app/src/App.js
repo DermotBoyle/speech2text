@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Jumbotron, Container } from 'reactstrap';
-import  { IoMdMegaphone  } from "react-icons/io";
+import  { FaMousePointer  } from "react-icons/fa";
+
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class App extends Component {
     return (
       <div className="App">
          <Navbar color="Faded" light>
-          <NavbarBrand href="/" className='Title'>< IoMdMegaphone /></NavbarBrand>
+          <NavbarBrand href="/" className='Title'>ii</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="Mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
@@ -41,7 +42,7 @@ class App extends Component {
       <Jumbotron fluid>
         <Container fluid>
           <h1 className="display-3">Limbiio</h1>
-          <p className="lead">An application to synthesize your text to speech in a click.</p>
+          <p className="lead">An application to synthesize your text to speech in a click<FaMousePointer/></p>
         </Container>
       </Jumbotron>
     </div>
