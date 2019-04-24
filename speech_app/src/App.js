@@ -4,6 +4,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Ju
 import  { FaMousePointer  } from "react-icons/fa";
 
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +47,9 @@ class App extends Component {
         </Container>
       </Jumbotron>
     </div>
-      </div>
+    <div>
+          </div>
+      </div> 
       
     );
   }
