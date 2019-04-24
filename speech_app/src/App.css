@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.Mr-auto {
-  text-align: center;
+.Title.navbar-brand {
+  font-size:   50px;
+  margin-left: 20px;
 }
-
