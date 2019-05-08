@@ -9,8 +9,9 @@
 
 .md-form {
     margin-right: 5rem;
-    margin-left: 3rem;
+    margin-left: 20rem;
     border: 1px solid black;
+    width: 700px;
 }
 
 .jumbotron.jumbotron-fluid{
