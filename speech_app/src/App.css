@@ -6,7 +6,10 @@
   font-size:   50px;
   margin-left: 20px;
 }
-
+.flexbox-container{
+  display: flex;
+  justify-content: center;
+}
 .md-form {
     margin-right: 5rem;
     margin-left: 20rem;
@@ -17,3 +20,4 @@
 .jumbotron.jumbotron-fluid{
   margin-bottom: 10rem;
 }
+

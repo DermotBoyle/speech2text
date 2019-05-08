@@ -5,6 +5,7 @@ import  { FaMousePointer  } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
 
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -47,12 +48,12 @@ class App extends Component {
         </Container>
       </Jumbotron>
     </div>
-    <div> <MDBInput
+    <div className="flexbox-container"> <MDBInput
           type="textarea"
           label="Text here to write"
           rows="2"
           icon="pencil-alt"/>
-        </div>
+        </div> 
    </div>
       
     );
