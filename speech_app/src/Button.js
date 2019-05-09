@@ -1,5 +1,6 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { ButtonGroup } from 'mdbreact';
 
 export default class Button extends React.Component {
   constructor(props) {
@@ -19,6 +20,8 @@ export default class Button extends React.Component {
 
   render() {
     return (
+    <ButtonGroup>
+        <Button>Quotes</Button>
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
           Language
@@ -29,6 +32,7 @@ export default class Button extends React.Component {
           <DropdownItem>French</DropdownItem>
           </DropdownMenu>
       </ButtonDropdown>
+      </ButtonGroup>
     );
   }
 }

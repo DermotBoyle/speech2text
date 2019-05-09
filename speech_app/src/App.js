@@ -3,7 +3,7 @@ import './App.css';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Jumbotron, Container } from 'reactstrap';
 import  { FaMousePointer  } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
-import Botton from './Button'; 
+import Button from './button'; 
 
 class App extends Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class App extends Component {
         </Container>
       </Jumbotron>
     </div>
-    <Botton/>
+    <Button/>
     <div className="flexbox-container"> <MDBInput
           type="textarea"
           rows="2"
