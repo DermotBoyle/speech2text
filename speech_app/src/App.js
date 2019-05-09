@@ -3,13 +3,11 @@ import './App.css';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Jumbotron, Container } from 'reactstrap';
 import  { FaMousePointer  } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
-
-
+import Botton from './Button'; 
 
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
       collapsed: true
@@ -48,10 +46,11 @@ class App extends Component {
         </Container>
       </Jumbotron>
     </div>
+    <Botton/>
     <div className="flexbox-container"> <MDBInput
           type="textarea"
-          label="Text here to write"
           rows="2"
+          label="Write here"
           icon="pencil-alt"/>
         </div> 
    </div>
