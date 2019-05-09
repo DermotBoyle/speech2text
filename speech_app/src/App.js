@@ -3,7 +3,7 @@ import './App.css';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Jumbotron, Container } from 'reactstrap';
 import  { FaMousePointer  } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
-import Button from "./button"
+import Button from "./button";
 import Voice from './button2';
 
 
