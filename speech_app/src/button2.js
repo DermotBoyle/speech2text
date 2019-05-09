@@ -2,7 +2,7 @@ import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 
-export default class Button extends React.Component {
+export default class Voice extends React.Component {
   constructor(props) {
     super(props);
 
@@ -22,12 +22,12 @@ export default class Button extends React.Component {
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-          Language
+          Voice
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>English</DropdownItem>
+          <DropdownItem>Male UK</DropdownItem>
           <DropdownItem divider />
-          <DropdownItem>French</DropdownItem>
+          <DropdownItem>Female UK</DropdownItem>
           </DropdownMenu>
       </ButtonDropdown>
     );
