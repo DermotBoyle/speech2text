@@ -5,7 +5,7 @@ import  { FaMousePointer  } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
 import Button from "./button";
 import Voice from './button2';
-
+import Quotes from './button3';
 
 
 class App extends Component {
@@ -52,12 +52,16 @@ class App extends Component {
     </div>
     <Button />
     <Voice />
+    <Quotes />
+
     <div className="flexbox-container float-center"> <MDBInput
           type="textarea"
           label="Text here to write"
           rows="2"
           icon="pencil-alt"/>
+         
         </div> 
+   
    </div>
       
     );
