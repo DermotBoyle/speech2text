@@ -6,6 +6,7 @@ import { MDBInput } from "mdbreact";
 import Button from "./button";
 import Voice from './button2';
 import Quotes from './button3';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends Component {
@@ -62,7 +63,7 @@ class App extends Component {
     <Button />
     <Voice />
     <Quotes />
-    <audio id="audio" controls="controls">
+    <audio id="audio">
       <source id="mp3Source" src= {url} type="audio/mp3"></source>
         Your browser does not support the audio format.
     </audio>
@@ -75,7 +76,10 @@ class App extends Component {
           icon="pencil-alt"/>
          
         </div> 
-   
+        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+        </button>
+
    </div>
       
     );
