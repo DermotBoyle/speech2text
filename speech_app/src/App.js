@@ -8,6 +8,7 @@ import Voice from './button2';
 import Quotes from './button3';
 
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -25,6 +26,9 @@ class App extends Component {
   }
 
   render() {
+    const key = "c72b3784423941dc9c71739cbbc51d41"
+    const words = // encodeURIComponent("la pelaes la pela")
+    const src= `http://api.voicerss.org/?key=${key}&hl=ca-es&src=La%20pela%20es%20la%20pela`
     return (
       <div className="App">
          <Navbar color="Faded" light>
@@ -53,7 +57,10 @@ class App extends Component {
     <Button />
     <Voice />
     <Quotes />
-
+    <audio id="audio" controls="controls">
+            <source type="audio/mp3" src={src} ></source>
+                Your browser does not support the audio format. 
+        </audio>
     <div className="flexbox-container float-center"> <MDBInput
           type="textarea"
           label="Text here to write"
@@ -61,7 +68,6 @@ class App extends Component {
           icon="pencil-alt"/>
          
         </div> 
-   
    </div>
       
     );
