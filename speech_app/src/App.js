@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Jumbotron, Container } from 'reactstrap';
-import { FaMousePointer  } from "react-icons/fa";
+import { FaMousePointer, FaPlay, FaPause  } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
 import Button from "./button";
 import Voice from './button2';
@@ -31,16 +31,10 @@ class App extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    const key = "c72b3784423941dc9c71739cbbc51d41"
-    const words = // encodeURIComponent("la pelaes la pela")
-    const src= `http://api.voicerss.org/?key=${key}&hl=ca-es&src=La%20pela%20es%20la%20pela`
-=======
   const encodedtext = "La%20pela%20es%20la%20pela";
   const key = "c72b3784423941dc9c71739cbbc51d41";
   const url = `http://api.voicerss.org/?key=${key}&hl=ca-es&src=${encodedtext}`;
 
->>>>>>> 96533fa87fc127a6b621c31a26fc128ad5765092
     return (
       <div className="App">
          <Navbar color="Faded" light>
@@ -70,16 +64,10 @@ class App extends Component {
     <Voice />
     <Quotes />
     <audio id="audio" controls="controls">
-<<<<<<< HEAD
-            <source type="audio/mp3" src={src} ></source>
-                Your browser does not support the audio format. 
-        </audio>
-=======
       <source id="mp3Source" src= {url} type="audio/mp3"></source>
         Your browser does not support the audio format.
     </audio>
 
->>>>>>> 96533fa87fc127a6b621c31a26fc128ad5765092
     <div className="flexbox-container float-center"> <MDBInput
           onChange={this.handleChange}
           type="textarea"
@@ -88,6 +76,8 @@ class App extends Component {
           icon="pencil-alt"/>
          
         </div> 
+     <button> <FaPlay/></button>
+     <button><FaPause/></button>
    </div>
       
     );
