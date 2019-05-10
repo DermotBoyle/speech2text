@@ -5,7 +5,6 @@ import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reac
 export default class Quotes extends React.Component {
   constructor(props) {
     super(props);
-
     this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false
@@ -25,7 +24,7 @@ export default class Quotes extends React.Component {
           Quotes
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>Funny quotes</DropdownItem>
+          <DropdownItem >Funny quotes</DropdownItem>
           </DropdownMenu>
       </ButtonDropdown>
     );

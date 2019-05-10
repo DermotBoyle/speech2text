@@ -4,7 +4,6 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Ju
 import { FaMousePointer, FaPlay, FaPause  } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
 import Button from "./button";
-import Voice from './button2';
 import Quotes from './button3';
 
 
@@ -40,6 +39,12 @@ class App extends Component {
     //this.setState({value: event.target.value});
   }
 
+  onPause= () => {
+    console.log("pause");
+    var audio = document.getElementById('audio');
+    audio.pause();
+  }
+  
   onlanguage = (event) => {  // función dentro del text area
     console.log(event);
     const value = event.target.value;
@@ -52,7 +57,7 @@ class App extends Component {
     this.setState({language: (language)});
   }
 
-  
+
   render() {
   const key = "c72b3784423941dc9c71739cbbc51d41";
   const url = `http://api.voicerss.org/?key=${key}&hl=${this.state.language}&src=${this.state.text}`;
@@ -82,13 +87,12 @@ class App extends Component {
         </Container>
       </Jumbotron>
     </div>
-    <Button changeLang={this.changeLang} prop2="hola"/>
-    <Voice />
-    <Quotes />
+    <Button changeLang={this.changeLang} />
+    <Quotes/> 
     <audio id="audio">
       <source id="mp3Source" src={url} type="audio/mp3"></source>
         Your browser does not support the audio format.
-    </audio>
+    </audio> 
 
     <div className="flexbox-container float-center"> <MDBInput
           onChange={this.handleChange}
@@ -99,7 +103,7 @@ class App extends Component {
          
         </div> 
       <button onClick={this.onPlaying}><FaPlay/></button>
-      <button onClick={this.onStop}> <FaPause/></button>
+      <button onClick={this.onPause}><FaPause/></button>
    </div>
       
     );
