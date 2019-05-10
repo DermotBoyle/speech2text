@@ -88,7 +88,10 @@ class App extends Component {
       </Jumbotron>
     </div>
     <Button changeLang={this.changeLang} />
+
+      
     <Quotes/> 
+    
     <audio id="audio">
       <source id="mp3Source" src={url} type="audio/mp3"></source>
         Your browser does not support the audio format.
@@ -97,8 +100,8 @@ class App extends Component {
     <div className="flexbox-container float-center"> <MDBInput
           onChange={this.handleChange}
           type="textarea"
-          label="Text here to write"
-          rows="2"
+          label="write here..."
+          rows="5"
           icon="pencil-alt"/>
          
         </div> 
