@@ -27,14 +27,22 @@ class App extends Component {
 
   handleChange = (event) => {
     console.log(event);
-    this.setState({value: event.target.value});
+    const value = event.target.value;
+    this.setState({text: encodeURIComponent(value)});
+  }
+
+  onPlaying = () => {
+    console.log("playing...")
+    var audio = document.getElementById('audio');
+    audio.load(); //call this to just preload the audio without playing
+    audio.play(); //call this to play the song right away
+    //this.setState({value: event.target.value});
   }
 
   render() {
-  const encodedtext = "La%20pela%20es%20la%20pela";
   const key = "c72b3784423941dc9c71739cbbc51d41";
-  const url = `http://api.voicerss.org/?key=${key}&hl=ca-es&src=${encodedtext}`;
-
+  const url = `http://api.voicerss.org/?key=${key}&hl=ca-es&src=${this.state.text}`;
+    console.log(url)
     return (
       <div className="App">
          <Navbar color="Faded" light>
@@ -63,8 +71,8 @@ class App extends Component {
     <Button />
     <Voice />
     <Quotes />
-    <audio id="audio" controls="controls">
-      <source id="mp3Source" src= {url} type="audio/mp3"></source>
+    <audio id="audio">
+      <source id="mp3Source" src={url} type="audio/mp3"></source>
         Your browser does not support the audio format.
     </audio>
 
@@ -76,8 +84,8 @@ class App extends Component {
           icon="pencil-alt"/>
          
         </div> 
-     <button> <FaPlay/></button>
-     <button><FaPause/></button>
+      <button onClick={this.onPlaying}><FaPlay/></button>
+      <button> <FaPause/></button>
    </div>
       
     );
