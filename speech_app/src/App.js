@@ -14,7 +14,8 @@ class App extends Component {
     super(props);
       this.state = {
       collapsed: true,
-      text : ""
+      text : "",
+      language: ""
       
     };
   }
@@ -25,23 +26,36 @@ class App extends Component {
     });
   }
 
-  handleChange = (event) => {
+  handleChange = (event) => {  // función dentro del text area
     console.log(event);
     const value = event.target.value;
     this.setState({text: encodeURIComponent(value)});
   }
 
   onPlaying = () => {
-    console.log("playing...")
+    console.log("playing...")  //
     var audio = document.getElementById('audio');
     audio.load(); //call this to just preload the audio without playing
     audio.play(); //call this to play the song right away
     //this.setState({value: event.target.value});
   }
 
+  onlanguage = (event) => {  // función dentro del text area
+    console.log(event);
+    const value = event.target.value;
+    this.setState({language: (value)});
+  }
+
+  changeLang= (language) => {
+    console.log(language,this)
+    // this.setState()
+    this.setState({language: (language)});
+  }
+
+  
   render() {
   const key = "c72b3784423941dc9c71739cbbc51d41";
-  const url = `http://api.voicerss.org/?key=${key}&hl=ca-es&src=${this.state.text}`;
+  const url = `http://api.voicerss.org/?key=${key}&hl=${this.state.language}&src=${this.state.text}`;
     console.log(url)
     return (
       <div className="App">
@@ -68,7 +82,7 @@ class App extends Component {
         </Container>
       </Jumbotron>
     </div>
-    <Button />
+    <Button changeLang={this.changeLang} prop2="hola"/>
     <Voice />
     <Quotes />
     <audio id="audio">
@@ -85,7 +99,7 @@ class App extends Component {
          
         </div> 
       <button onClick={this.onPlaying}><FaPlay/></button>
-      <button> <FaPause/></button>
+      <button onClick={this.onStop}> <FaPause/></button>
    </div>
       
     );

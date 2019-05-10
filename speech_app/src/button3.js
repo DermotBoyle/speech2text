@@ -25,9 +25,7 @@ export default class Quotes extends React.Component {
           Quotes
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>Quotes 1</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>Quotes 2</DropdownItem>
+          <DropdownItem>Funny quotes</DropdownItem>
           </DropdownMenu>
       </ButtonDropdown>
     );
