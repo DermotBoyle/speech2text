@@ -58,7 +58,10 @@ class App extends Component {
     this.setState({language: (language)});
   }
 
-  randomQuote = () => {
+
+// la función que está debajo del comentario tiene un api del link que me enviaste 
+
+  randomQuote = () => { 
     fetch("https://favqs.com/api/")
       .then(response => response.json())
       .then(response => {
@@ -68,8 +71,6 @@ class App extends Component {
         });
       });
   }
-
-
 
   render() {
   const key = "c72b3784423941dc9c71739cbbc51d41";
