@@ -15,6 +15,7 @@ class App extends Component {
       collapsed: true,
       text : "",
       language: ""
+
       
     };
   }
@@ -58,14 +59,17 @@ class App extends Component {
   }
 
   randomQuote = () => {
-    fetch("https://andruxnet-random-famous-quotes.p.rapidapi.com/?cat=famous")
+    fetch("https://favqs.com/api/")
       .then(response => response.json())
       .then(response => {
+        console.log(response)
         this.setState({
-          selectQuote: response[0],
+          text: quote
         });
       });
   }
+
+
 
   render() {
   const key = "c72b3784423941dc9c71739cbbc51d41";

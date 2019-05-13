@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
 import { Button } from 'reactstrap';
 
-
-export default class button3 extends Component {
-
-  
-  render() {
+const quote = ({selectQuote}) => {
     return (
-
       <div>
-        <Button>Quotes</Button> 
+        <Button onClick={selectQuote}>Quotes</Button> 
       </div>
-    )
-  }
-}
+    );
+  };
+
+  export default quote;

@@ -6,7 +6,7 @@ import {faYoutube, faGithub, faTwitter,} from "@fortawesome/free-brands-svg-icon
 
 const FooterPage = () => {
   return (
-    <MDBFooter color="purple lighten-2" className="font-small pt-4 mt-4">
+    <MDBFooter color="blue-grey lighten-3" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
@@ -15,7 +15,7 @@ const FooterPage = () => {
               We made this challenge to see if it works and it did!
             </p>
           </MDBCol>
-          <MDBCol md="6">
+          <MDBCol md="6" >
             <h5 className="title">Follow us</h5>
             <ul>
               <li className="list-unstyled">
