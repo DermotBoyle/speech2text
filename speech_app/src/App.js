@@ -5,7 +5,7 @@ import { FaMousePointer, FaPlay, FaPause  } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
 import Button from "./button";
 import Quotes from './button3';
-
+import FooterPage from './footer';
 
 
 class App extends Component {
@@ -57,6 +57,15 @@ class App extends Component {
     this.setState({language: (language)});
   }
 
+  randomQuote = () => {
+    fetch("https://andruxnet-random-famous-quotes.p.rapidapi.com/?cat=famous")
+      .then(response => response.json())
+      .then(response => {
+        this.setState({
+          selectQuote: response[0],
+        });
+      });
+  }
 
   render() {
   const key = "c72b3784423941dc9c71739cbbc51d41";
@@ -78,6 +87,7 @@ class App extends Component {
             </Nav>
           </Collapse>
         </Navbar>
+      
 
       <div className="Input">
       <Jumbotron fluid>
@@ -87,11 +97,11 @@ class App extends Component {
         </Container>
       </Jumbotron>
     </div>
-    <Button changeLang={this.changeLang} />
 
+    <Quotes selectQuote={() => this.randomQuote()}/> 
+
+    <Button changeLang={this.changeLang} />
       
-    <Quotes/> 
-    
     <audio id="audio">
       <source id="mp3Source" src={url} type="audio/mp3"></source>
         Your browser does not support the audio format.
@@ -107,6 +117,7 @@ class App extends Component {
         </div> 
       <button onClick={this.onPlaying}><FaPlay/></button>
       <button onClick={this.onPause}><FaPause/></button>
+    <FooterPage/>
    </div>
       
     );
