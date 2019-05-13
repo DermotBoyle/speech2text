@@ -1,0 +1,25 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "By Brenda and Dermot",
+  "main": "index.js",
+  "dependencies": {
+    "react-icons": "^3.6.1",
+    "react-speech": "^0.3.2",
+    "react-voice-components": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DermotBoyle/speech2text.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DermotBoyle/speech2text/issues"
+  },
+  "homepage": "https://github.com/DermotBoyle/speech2text#readme"
+}

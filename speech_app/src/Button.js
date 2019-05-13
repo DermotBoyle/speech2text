@@ -19,15 +19,22 @@ export default class Button extends React.Component {
   }
 
   render() {
+    
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
           Language
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>English</DropdownItem>
+          <DropdownItem onClick={() => this.props.changeLang("en-gb")}>English</DropdownItem>
           <DropdownItem divider />
-          <DropdownItem>French</DropdownItem>
+          <DropdownItem onClick={() => this.props.changeLang("fr-fr")}>French</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem onClick={() => this.props.changeLang("pt-br")}>Portuguese</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem onClick={() => this.props.changeLang("ja-jp")}>Japanese</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem onClick={() => this.props.changeLang("nl-nl")}>Dutch</DropdownItem>
           </DropdownMenu>
       </ButtonDropdown>
     );

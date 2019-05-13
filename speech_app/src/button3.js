@@ -1,35 +1,13 @@
-import React from 'react';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import React, { Component } from "react";
+import { Button } from "reactstrap";
 
-
-export default class Quotes extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false
-    };
-  }
-
-  toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    });
-  }
-
+export default class button3 extends Component {
   render() {
     return (
-      <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle caret>
-          Quotes
-        </DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem>Quotes 1</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>Quotes 2</DropdownItem>
-          </DropdownMenu>
-      </ButtonDropdown>
+      <div>
+        <Button>Quotes</Button>
+        {/* No sé como ponerlo aquí */}
+      </div>
     );
   }
 }
