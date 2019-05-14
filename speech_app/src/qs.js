@@ -55,6 +55,8 @@ class Dermot extends Component {
         <h1>Quote Generator</h1>
         <button onClick={this.getRandomQuote}>Click Here</button>
         {this.state.hasQuote === true ? this.renderQuote() : "No Quote Yet"}
+        <p>{this.state.quote.content}</p>
+
       </Fragment>
     );
   }
