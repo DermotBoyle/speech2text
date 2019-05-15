@@ -21,3 +21,12 @@
 .jumbotron.jumbotron-fluid{
   margin-bottom: 10rem;
 }
+.particlesjs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 50%;
+}
+

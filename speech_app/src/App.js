@@ -16,6 +16,7 @@ import { MDBInput } from "mdbreact";
 import Button from "./Button";
 import FooterPage from "./footer";
 import Quote from "./qs.js";
+import Particles from "./Particles"
 
 class App extends Component {
   constructor(props) {
@@ -74,8 +75,10 @@ class App extends Component {
     }&src=${this.state.text}`;
     console.log(url);
     return (
-      <div className="App">
+      
+    <div className="App" ><Particles/>
         <Navbar color="Faded" light>
+        
           <NavbarBrand href="/" className="Title">
             ii
           </NavbarBrand>
@@ -91,9 +94,10 @@ class App extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-
+        
         <div className="Input">
           <Jumbotron fluid>
+
             <Container fluid>
               <h1 className="display-3">Limbiio</h1>
               <p className="lead">
@@ -105,14 +109,14 @@ class App extends Component {
         </div>
 
         <Quote />
-
+      <div className="particle">
         <Button changeLang={this.changeLang} />
 
         <audio id="audio">
           <source id="mp3Source" src={url} type="audio/mp3" />
           Your browser does not support the audio format.
         </audio>
-
+        
         <div className="flexbox-container float-center">
           {" "}
           <MDBInput
@@ -123,14 +127,17 @@ class App extends Component {
             icon="pencil-alt"
           />
         </div>
+        
         <button onClick={this.onPlaying}>
           <FaPlay />
         </button>
         <button onClick={this.onPause}>
           <FaPause />
         </button>
+        </div>
         <FooterPage />
       </div>
+      
     );
   }
 }
