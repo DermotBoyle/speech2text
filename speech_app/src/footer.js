@@ -13,10 +13,7 @@ const FooterPage = () => {
     <MDBFooter color="blue-grey lighten-3" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
-          <MDBCol md="6">
-            <h5 className="title">This is a test</h5>
-            <p>We made this challenge to see if it works and it did!</p>
-          </MDBCol>
+          <MDBCol md="6" />
           <MDBCol md="6">
             <h5 className="title">Follow us</h5>
             <ul>
