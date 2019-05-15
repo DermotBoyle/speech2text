@@ -13,7 +13,6 @@ import {
 } from "reactstrap";
 import { FaMousePointer, FaPlay, FaPause } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
-import Button from "./Button";
 import FooterPage from "./footer";
 import Quote from "./qs.js";
 
@@ -105,8 +104,6 @@ class App extends Component {
         </div>
 
         <Quote />
-
-        <Button changeLang={this.changeLang} />
 
         <audio id="audio">
           <source id="mp3Source" src={url} type="audio/mp3" />

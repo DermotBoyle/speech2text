@@ -3,6 +3,7 @@ import { Button } from "reactstrap";
 import axios from "axios";
 import TweetBtn from "./tweet";
 import "./qs.css";
+import LanguageChange from "./Button";
 
 class Quote extends Component {
   state = {
@@ -50,24 +51,13 @@ class Quote extends Component {
   }
 }
 
-<<<<<<< HEAD
-const NewQuoteBtn = (props) => {
-    return (
-      <Button onClick={props.changeQuote}>New Quote</Button>
-    );
-}
-
-const Display = (props) => {
-    return (
-        <div className="display">
-            <p>{props.quote}</p>
-            <h5>{props.author}</h5>
-        </div>
-    )
-}
-=======
 const NewQuoteBtn = props => {
-  return <Button onClick={props.changeQuote}>New Quote</Button>;
+  return (
+    <React.Fragment>
+      <Button onClick={props.changeQuote}>New Quote</Button>
+      <LanguageChange />
+    </React.Fragment>
+  );
 };
 
 const Display = props => {
@@ -78,6 +68,5 @@ const Display = props => {
     </div>
   );
 };
->>>>>>> 901c874d5f7ea23885021fc4dadfdc03e9fa79c7
 
 export default Quote;

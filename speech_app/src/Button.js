@@ -1,8 +1,12 @@
-import React from 'react';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import React from "react";
+import {
+  ButtonDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from "reactstrap";
 
-
-export default class Button extends React.Component {
+export default class LanguageChange extends React.Component {
   constructor(props) {
     super(props);
 
@@ -19,23 +23,30 @@ export default class Button extends React.Component {
   }
 
   render() {
-    
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle caret>
-          Language
-        </DropdownToggle>
+        <DropdownToggle caret>Language</DropdownToggle>
         <DropdownMenu>
-          <DropdownItem onClick={() => this.props.changeLang("en-gb")}>English</DropdownItem>
+          <DropdownItem onClick={() => this.props.changeLang("en-gb")}>
+            English
+          </DropdownItem>
           <DropdownItem divider />
-          <DropdownItem onClick={() => this.props.changeLang("fr-fr")}>French</DropdownItem>
+          <DropdownItem onClick={() => this.props.changeLang("fr-fr")}>
+            French
+          </DropdownItem>
           <DropdownItem divider />
-          <DropdownItem onClick={() => this.props.changeLang("pt-br")}>Portuguese</DropdownItem>
+          <DropdownItem onClick={() => this.props.changeLang("pt-br")}>
+            Portuguese
+          </DropdownItem>
           <DropdownItem divider />
-          <DropdownItem onClick={() => this.props.changeLang("ja-jp")}>Japanese</DropdownItem>
+          <DropdownItem onClick={() => this.props.changeLang("ja-jp")}>
+            Japanese
+          </DropdownItem>
           <DropdownItem divider />
-          <DropdownItem onClick={() => this.props.changeLang("nl-nl")}>Dutch</DropdownItem>
-          </DropdownMenu>
+          <DropdownItem onClick={() => this.props.changeLang("nl-nl")}>
+            Dutch
+          </DropdownItem>
+        </DropdownMenu>
       </ButtonDropdown>
     );
   }
