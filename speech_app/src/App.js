@@ -109,9 +109,15 @@ class App extends Component {
         </div>
 
         <Quote />
+<<<<<<< HEAD
       <div className="particle">
         <Button changeLang={this.changeLang} />
 
+=======
+        <div className="langbtn">
+          <Button className="lang" changeLang={this.changeLang} />
+        </div>
+>>>>>>> b630adf708e92f3bc00168fc717d7e33ea4fd1b5
         <audio id="audio">
           <source id="mp3Source" src={url} type="audio/mp3" />
           Your browser does not support the audio format.
@@ -127,6 +133,7 @@ class App extends Component {
             icon="pencil-alt"
           />
         </div>
+<<<<<<< HEAD
         
         <button onClick={this.onPlaying}>
           <FaPlay />
@@ -134,6 +141,15 @@ class App extends Component {
         <button onClick={this.onPause}>
           <FaPause />
         </button>
+=======
+        <div className="playpause">
+          <button onClick={this.onPlaying} className="primary">
+            <FaPlay />
+          </button>
+          <button onClick={this.onPause} className="pause">
+            <FaPause />
+          </button>
+>>>>>>> b630adf708e92f3bc00168fc717d7e33ea4fd1b5
         </div>
         <FooterPage />
       </div>

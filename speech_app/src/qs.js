@@ -51,7 +51,11 @@ class Quote extends Component {
 }
 
 const NewQuoteBtn = props => {
-  return <Button onClick={props.changeQuote}>New Quote</Button>;
+  return (
+    <Button className="quotebtn" onClick={props.changeQuote}>
+      New Quote
+    </Button>
+  );
 };
 
 const Display = props => {
