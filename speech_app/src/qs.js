@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button } from "reactstrap";
 import axios from "axios";
 import TweetBtn from "./tweet";
+import "./qs.css";
 
 class Quote extends Component {
   state = {
