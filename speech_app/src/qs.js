@@ -1,44 +1,65 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
+import { Button } from "reactstrap";
+import axios from "axios";
+import TweetBtn from "./tweet";
 
-class Dermot extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: [],
-      content: ""
-    };
-  }
+class Quote extends Component {
+  state = {
+    quote: "",
+    author: ""
+  };
 
   componentDidMount() {
-    axios
-      .get(
-        "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1"
-      )
-      .then(res => res.json())
-      .then(data => {
-        this.setState(
-          {
-            id: res.data
-        })
+    this.getQuote();
+  }
 
-  renderQuote = () => {
-    const { title, content } = this.state.quote;
-    return (
-      <div>
-        <h1>{title}</h1>
-        <p>{content}</p>
-      </div>
-    );
+  getQuote() {
+    let url =
+      "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
+
+    axios.get(url).then(res => {
+      let randomQuote = Math.floor(Math.random() * res.data.quotes.length);
+
+      this.setState({
+        quote: res.data.quotes[randomQuote]["quote"],
+        author: res.data.quotes[randomQuote]["author"]
+      });
+    });
+  }
+
+  getNewQuote = () => {
+    this.getQuote();
   };
 
   render() {
     return (
-      <Fragment>
-        <h1>Quote Generator</h1>
-        <button onClick={this.state.quote}>Click Here</button>
-      </Fragment>
+      <div>
+        <div className="card">
+          <div className="card-header">Quote :</div>
+          <div className="card-body">
+            <Display quote={this.state.quote} author={this.state.author} />
+          </div>
+        </div>
+        <div id="buttons">
+          <NewQuoteBtn changeQuote={this.getNewQuote} />
+          <TweetBtn quote={this.state.quote} author={this.state.author} />
+        </div>
+      </div>
     );
   }
 }
 
-export default Dermot;
+const NewQuoteBtn = props => {
+  return <Button onClick={props.changeQuote}>New Quote</Button>;
+};
+
+const Display = props => {
+  return (
+    <div className="display">
+      <p>{props.quote}</p>
+      <h5>{props.author}</h5>
+    </div>
+  );
+};
+
+export default Quote;
