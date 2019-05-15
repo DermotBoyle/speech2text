@@ -7,32 +7,31 @@ import {
   faGithub,
   faTwitter
 } from "@fortawesome/free-brands-svg-icons";
+import "./footer.css";
 
 const FooterPage = () => {
   return (
     <MDBFooter color="blue-grey lighten-3" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
-          <MDBCol md="6" />
           <MDBCol md="6">
             <h5 className="title">Follow us</h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="https://www.youtube.com/" className="youtube social">
-                  <FontAwesomeIcon icon={faYoutube} size="2x" />
-                </a>
-              </li>
-              <li className="list-unstyled">
-                <a href="https://www.github.com/" className="youtube social">
-                  <FontAwesomeIcon icon={faGithub} size="2x" />
-                </a>
-              </li>
-              <li className="list-unstyled">
-                <a href="https://www.twitter.com/" className="youtube social">
-                  <FontAwesomeIcon icon={faTwitter} size="2x" />
-                </a>
-              </li>
-            </ul>
+            <div className="list">
+              <a href="https://www.youtube.com/" className="youtube social">
+                <FontAwesomeIcon icon={faYoutube} size="2x" />
+              </a>
+
+              <a
+                href="https://github.com/DermotBoyle/speech2text"
+                className="youtube social"
+              >
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </a>
+
+              <a href="https://www.twitter.com/" className="youtube social">
+                <FontAwesomeIcon icon={faTwitter} size="2x" />
+              </a>
+            </div>
           </MDBCol>
         </MDBRow>
       </MDBContainer>

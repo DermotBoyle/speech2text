@@ -3,21 +3,25 @@
 }
 
 .Title.navbar-brand {
-  font-size:   50px;
+  font-size: 50px;
   margin-left: 20px;
 }
-.flexbox-container{
+.flexbox-container {
   display: flex;
   justify-content: center;
 }
 .md-form {
-    margin-right: 12rem;
-    margin-left: 12rem;
-    border: 1px solid black;
-    width: 700px;
-    height: 200px;
+  margin-right: 12rem;
+  margin-left: 12rem;
+  border: 1px solid black;
+  width: 700px;
+  height: 200px;
 }
 
-.jumbotron.jumbotron-fluid{
+.jumbotron.jumbotron-fluid {
   margin-bottom: 10rem;
+}
+
+button.btn.btn-secondary {
+  background-color: #38a1f3;
 }
