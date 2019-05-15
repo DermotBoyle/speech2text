@@ -119,9 +119,8 @@ class App extends Component {
         </div>
 
         <Quotes selectQuote={() => this.randomQuote()} />
-        <Dermot />
-
         <Button changeLang={this.changeLang} />
+        <Dermot />
 
         <audio id="audio">
           <source id="mp3Source" src={url} type="audio/mp3" />
