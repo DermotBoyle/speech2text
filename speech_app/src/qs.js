@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { Button } from "reactstrap";
 
 class Dermot extends Component {
   constructor() {
@@ -8,16 +9,14 @@ class Dermot extends Component {
         content: "",
         link: "",
         title: "",
-        data: "data"
       },
       hasQuote: false
     };
 
-    this.endpoint =
-      "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=8";
+    this.endpoint = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
   }
 
-  getRandomQuote = event => {
+  getRandomQuote = () => {
     fetch(this.endpoint)
       .then(response => response.json())
       .then(data => {
@@ -33,7 +32,8 @@ class Dermot extends Component {
               this.setState({ hasQuote: true });
             }
           });
-        } else {
+        } 
+        else {
           return console.error("No Quote");
         }
       });
@@ -44,17 +44,17 @@ class Dermot extends Component {
     return (
       <div>
         <h1>{title}</h1>
-        <p>{content}</p>
+        {JSON.stringify(content)}
       </div>
     );
   };
 
   render() {
+    const { hasQuote } = this.state;
     return (
       <Fragment>
-        <h1>Quote Generator</h1>
-        <button onClick={this.getRandomQuote}>Click Here</button>
-        {this.state.hasQuote === true ? this.renderQuote() : "No Quote Yet"}
+        <Button onClick={this.getRandomQuote}>Click Here</Button>
+        {hasQuote === true ? this.renderQuote() : " "}
       </Fragment>
     );
   }

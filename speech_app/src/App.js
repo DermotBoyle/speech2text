@@ -14,7 +14,6 @@ import {
 import { FaMousePointer, FaPlay, FaPause } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
 import Button from "./Button";
-import Quotes from "./button3";
 import FooterPage from "./footer";
 import Dermot from "./qs.js";
 
@@ -68,19 +67,6 @@ class App extends Component {
     this.setState({ language: language });
   };
 
-  // la función que está debajo del comentario tiene un api del link que me enviaste
-
-  /* randomQuote = () => {
-    fetch("https://favqs.com/api/")
-      .then(response => response.json())
-      .then(response => {
-        console.log(response);
-        this.setState({
-          text: quote
-        });
-      });
-  };*/
-
   render() {
     const key = "c72b3784423941dc9c71739cbbc51d41";
     const url = `http://api.voicerss.org/?key=${key}&hl=${
@@ -118,7 +104,6 @@ class App extends Component {
           </Jumbotron>
         </div>
 
-        <Quotes selectQuote={() => this.randomQuote()} />
         <Dermot />
 
         <Button changeLang={this.changeLang} />
@@ -136,6 +121,7 @@ class App extends Component {
             label="write here..."
             rows="5"
             icon="pencil-alt"
+            onClick={this.renderQuote}
           />
         </div>
         <button onClick={this.onPlaying}>
