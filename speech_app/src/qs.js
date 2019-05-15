@@ -62,6 +62,4 @@ const Display = (props) => {
     )
 }
 
-
-
 export default Quote;

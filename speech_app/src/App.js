@@ -121,7 +121,6 @@ class App extends Component {
             label="write here..."
             rows="5"
             icon="pencil-alt"
-            onClick={this.renderQuote}
           />
         </div>
         <button onClick={this.onPlaying}>
