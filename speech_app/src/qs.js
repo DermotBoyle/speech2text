@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
-import { Button } from "reactstrap";
+import {Button} from 'reactstrap';
 
-class Dermot extends Component {
+class Quote extends Component {
   constructor() {
     super();
     this.state = {
@@ -9,14 +9,16 @@ class Dermot extends Component {
         content: "",
         link: "",
         title: "",
+        data: "data"
       },
       hasQuote: false
     };
 
-    this.endpoint = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+    this.endpoint =
+      "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=8";
   }
 
-  getRandomQuote = () => {
+  getRandomQuote = event => {
     fetch(this.endpoint)
       .then(response => response.json())
       .then(data => {
@@ -32,8 +34,7 @@ class Dermot extends Component {
               this.setState({ hasQuote: true });
             }
           });
-        } 
-        else {
+        } else {
           return console.error("No Quote");
         }
       });
@@ -44,20 +45,19 @@ class Dermot extends Component {
     return (
       <div>
         <h1>{title}</h1>
-        {JSON.stringify(content)}
+        <p>{content}</p>
       </div>
     );
   };
 
   render() {
-    const { hasQuote } = this.state;
     return (
       <Fragment>
-        <Button onClick={this.getRandomQuote}>Click Here</Button>
-        {hasQuote === true ? this.renderQuote() : " "}
+        <Button onClick={this.getRandomQuote}>Quotes</Button>
+        {this.state.hasQuote === true ? this.renderQuote() : " "}
       </Fragment>
     );
   }
 }
 
-export default Dermot;
+export default Quote;

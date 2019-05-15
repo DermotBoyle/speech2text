@@ -15,7 +15,7 @@ import { FaMousePointer, FaPlay, FaPause } from "react-icons/fa";
 import { MDBInput } from "mdbreact";
 import Button from "./Button";
 import FooterPage from "./footer";
-import Dermot from "./qs.js";
+import Quote from "./qs.js";
 
 class App extends Component {
   constructor(props) {
@@ -104,7 +104,7 @@ class App extends Component {
           </Jumbotron>
         </div>
 
-        <Dermot />
+        <Quote />
 
         <Button changeLang={this.changeLang} />
 
