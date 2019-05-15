@@ -9,9 +9,8 @@ export default class TweetBtn extends Component {
        render() {
            
          return <a href={`https://twitter.com/intent/tweet?text= ${this.props.quote} ${this.props.author}`} target=" ">
-             <Button  onClick={this.tweetBtn}>
-               Tweet
-            <FaTwitter/>
+             <Button  onClick={this.tweetBtn}>Tweet
+             <FaTwitter/>
              </Button>
            </a>;     
       }
