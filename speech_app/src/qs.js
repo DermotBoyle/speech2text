@@ -50,22 +50,6 @@ class Quote extends Component {
   }
 }
 
-<<<<<<< HEAD
-const NewQuoteBtn = (props) => {
-    return (
-      <Button onClick={props.changeQuote}>New Quote</Button>
-    );
-}
-
-const Display = (props) => {
-    return (
-        <div className="display">
-            <p>{props.quote}</p>
-            <h5>{props.author}</h5>
-        </div>
-    )
-}
-=======
 const NewQuoteBtn = props => {
   return <Button onClick={props.changeQuote}>New Quote</Button>;
 };
@@ -78,6 +62,5 @@ const Display = props => {
     </div>
   );
 };
->>>>>>> 901c874d5f7ea23885021fc4dadfdc03e9fa79c7
 
 export default Quote;
