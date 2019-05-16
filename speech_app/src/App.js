@@ -16,7 +16,7 @@ import { MDBInput } from "mdbreact";
 import Button from "./Button";
 import FooterPage from "./footer";
 import Quote from "./qs.js";
-import Particles from "./Particles"
+import Particles from "./Particles";
 
 class App extends Component {
   constructor(props) {
@@ -68,6 +68,12 @@ class App extends Component {
     this.setState({ language: language });
   };
 
+  instructionsAlert = event => {
+    alert(
+      "You can change the language with the dropdown. Write into the textarea and press play!"
+    );
+  };
+
   render() {
     const key = "c72b3784423941dc9c71739cbbc51d41";
     const url = `http://api.voicerss.org/?key=${key}&hl=${
@@ -75,10 +81,9 @@ class App extends Component {
     }&src=${this.state.text}`;
     console.log(url);
     return (
-      
-    <div className="App" ><Particles/>
+      <div className="App">
+        <Particles />
         <Navbar color="Faded" light>
-        
           <NavbarBrand href="/" className="Title">
             ii
           </NavbarBrand>
@@ -86,7 +91,7 @@ class App extends Component {
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="//">Instructions</NavLink>
+                <NavLink onClick={this.instructionsAlert}>Instructions</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/about">About</NavLink>
@@ -94,10 +99,9 @@ class App extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-        
+
         <div className="Input">
           <Jumbotron fluid>
-
             <Container fluid>
               <h1 className="display-3">Limbiio</h1>
               <p className="lead">
@@ -116,7 +120,7 @@ class App extends Component {
           <source id="mp3Source" src={url} type="audio/mp3" />
           Your browser does not support the audio format.
         </audio>
-        
+
         <div className="flexbox-container float-center">
           {" "}
           <MDBInput
@@ -137,7 +141,6 @@ class App extends Component {
         </div>
         <FooterPage />
       </div>
-      
     );
   }
 }
